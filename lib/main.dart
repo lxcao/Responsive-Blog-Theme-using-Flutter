@@ -1,4 +1,13 @@
+/*
+ * @Author: clingxin
+ * @Date: 2021-03-27 14:23:30
+ * @LastEditTime: 2021-04-11 21:23:19
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/main.dart
+ */
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:news/screens/main/main_screen.dart';
 
 import 'constants.dart';
@@ -11,9 +20,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'News',
       theme: ThemeData(
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: kBgColor,
