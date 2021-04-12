@@ -1,7 +1,7 @@
 /*
  * @Author: clingxin
  * @Date: 2021-04-11 21:04:42
- * @LastEditTime: 2021-04-11 21:40:22
+ * @LastEditTime: 2021-04-12 10:07:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/main/components/web_menu.dart
@@ -10,6 +10,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news/controllers/MenuController.dart';
 
+import '../../../constants.dart';
+import '../../../constants.dart';
+import '../../../constants.dart';
 import '../../../constants.dart';
 
 class WebMenu extends StatelessWidget {
@@ -31,7 +34,7 @@ class WebMenu extends StatelessWidget {
   }
 }
 
-class WebMenuItem extends StatelessWidget {
+class WebMenuItem extends StatefulWidget {
   const WebMenuItem({
     Key key,
     @required this.isActive,
@@ -44,25 +47,47 @@ class WebMenuItem extends StatelessWidget {
   final VoidCallback press;
 
   @override
+  _WebMenuItemState createState() => _WebMenuItemState();
+}
+
+class _WebMenuItemState extends State<WebMenuItem> {
+  bool _isHover = false;
+
+  Color _borderColor() {
+    if (widget.isActive) {
+      return kPrimaryColor;
+    } else if (!widget.isActive & _isHover) {
+      return kPrimaryColor.withOpacity(0.4);
+    }
+    return Colors.transparent;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: press,
-      child: Container(
+      onTap: widget.press,
+      onHover: (value) {
+        setState(() {
+          _isHover = value;
+        });
+      },
+      child: AnimatedContainer(
+        duration: kDefaultDuration,
         margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
         padding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
-              color: isActive ? kPrimaryColor : Colors.transparent,
+              color: _borderColor(),
               width: 3,
             ),
           ),
         ),
         child: Text(
-          text,
+          widget.text,
           style: TextStyle(
             color: Colors.white,
-            fontWeight: isActive ? FontWeight.w600 : FontWeight.normal,
+            fontWeight: widget.isActive ? FontWeight.w600 : FontWeight.normal,
           ),
         ),
       ),
