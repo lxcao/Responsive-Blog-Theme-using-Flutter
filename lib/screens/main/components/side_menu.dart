@@ -2,14 +2,14 @@
  * @Author: clingxin
  * @Date: 2021-04-15 10:51:37
  * @LastEditors: clingxin
- * @LastEditTime: 2021-04-15 11:07:58
+ * @LastEditTime: 2021-04-15 16:09:19
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/main/components/side_menu.dart
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:news/constants.dart';
-import 'package:news/controllers/MenuController.dart';
+import '../../../constants.dart';
+import '../../../controllers/MenuController.dart';
 
 class SideMenu extends StatelessWidget {
   final MenuController _controller = Get.put(MenuController());

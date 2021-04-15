@@ -2,13 +2,13 @@
  * @Author: clingxin
  * @Date: 2021-04-15 09:10:02
  * @LastEditors: clingxin
- * @LastEditTime: 2021-04-15 09:10:54
+ * @LastEditTime: 2021-04-15 16:12:30
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/components/search.dart
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:news/constants.dart';
-import 'package:news/screens/home/components/sidebar_container.dart';
+import '../../../constants.dart';
+import '../../../screens/home/components/sidebar_container.dart';
 
 class Search extends StatelessWidget {
   const Search({

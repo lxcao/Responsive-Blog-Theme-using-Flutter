@@ -2,12 +2,12 @@
  * @Author: clingxin
  * @Date: 2021-04-15 09:58:49
  * @LastEditors: clingxin
- * @LastEditTime: 2021-04-15 10:00:05
+ * @LastEditTime: 2021-04-15 16:11:26
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/components/recent_posts.dart
  */
 import 'package:flutter/material.dart';
-import 'package:news/constants.dart';
-import 'package:news/screens/home/components/sidebar_container.dart';
+import '../../../constants.dart';
+import '../../../screens/home/components/sidebar_container.dart';
 
 class RecentPosts extends StatelessWidget {
   const RecentPosts({

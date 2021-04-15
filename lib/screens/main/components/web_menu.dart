@@ -1,14 +1,14 @@
 /*
  * @Author: clingxin
  * @Date: 2021-04-11 21:04:42
- * @LastEditTime: 2021-04-13 20:05:00
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-15 16:13:03
+ * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/main/components/web_menu.dart
  */
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news/controllers/MenuController.dart';
+import '../../../controllers/MenuController.dart';
 
 import '../../../constants.dart';
 

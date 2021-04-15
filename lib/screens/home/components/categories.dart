@@ -2,12 +2,12 @@
  * @Author: clingxin
  * @Date: 2021-04-15 09:31:20
  * @LastEditors: clingxin
- * @LastEditTime: 2021-04-15 09:32:17
+ * @LastEditTime: 2021-04-15 16:11:53
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/components/categories.dart
  */
 import 'package:flutter/material.dart';
-import 'package:news/constants.dart';
-import 'package:news/screens/home/components/sidebar_container.dart';
+import '../../../constants.dart';
+import '../../../screens/home/components/sidebar_container.dart';
 
 class Categories extends StatelessWidget {
   const Categories({

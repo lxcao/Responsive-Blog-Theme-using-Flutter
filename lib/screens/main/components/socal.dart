@@ -1,14 +1,14 @@
 /*
  * @Author: clingxin
  * @Date: 2021-04-12 10:33:27
- * @LastEditTime: 2021-04-15 11:02:10
+ * @LastEditTime: 2021-04-15 16:06:18
  * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/main/components/socal.dart
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:news/responsive.dart';
+import '../../../responsive.dart';
 
 import '../../../constants.dart';
 

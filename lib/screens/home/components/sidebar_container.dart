@@ -2,11 +2,11 @@
  * @Author: clingxin
  * @Date: 2021-04-15 09:08:37
  * @LastEditors: clingxin
- * @LastEditTime: 2021-04-15 09:09:44
+ * @LastEditTime: 2021-04-15 16:12:43
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/components/sidebar_container.dart
  */
 import 'package:flutter/material.dart';
-import 'package:news/constants.dart';
+import '../../../constants.dart';
 
 class SidebarContainer extends StatelessWidget {
   final String title;

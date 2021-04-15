@@ -1,16 +1,16 @@
 /*
  * @Author: clingxin
  * @Date: 2021-03-27 14:23:30
- * @LastEditTime: 2021-04-15 11:27:27
+ * @LastEditTime: 2021-04-15 16:02:33
  * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/main.dart
  */
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:news/screens/main/main_screen.dart';
 
 import 'constants.dart';
+import 'screens/main/main_screen.dart';
 
 void main() {
   runApp(MyApp());
