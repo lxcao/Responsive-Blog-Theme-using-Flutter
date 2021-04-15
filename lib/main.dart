@@ -1,8 +1,8 @@
 /*
  * @Author: clingxin
  * @Date: 2021-03-27 14:23:30
- * @LastEditTime: 2021-04-11 21:23:19
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-15 11:27:27
+ * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/main.dart
  */
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'News',
+      title: 'Responsive UI',
       theme: ThemeData(
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: kBgColor,
