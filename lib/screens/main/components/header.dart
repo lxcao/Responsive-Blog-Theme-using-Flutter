@@ -1,13 +1,14 @@
 /*
  * @Author: clingxin
  * @Date: 2021-04-12 10:25:29
- * @LastEditTime: 2021-04-12 10:50:54
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-15 10:15:24
+ * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/main/components/header.dart
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:news/responsive.dart';
 import 'package:news/screens/main/components/socal.dart';
 import 'package:news/screens/main/components/web_menu.dart';
 
@@ -34,9 +35,17 @@ class Header extends StatelessWidget {
                 children: [
                   Row(
                     children: [
+                      if (!Responsive.isDesktop(context))
+                        IconButton(
+                          icon: Icon(
+                            Icons.menu,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {},
+                        ),
                       SvgPicture.asset("assets/icons/logo.svg"),
                       Spacer(),
-                      WebMenu(),
+                      if (Responsive.isDesktop(context)) WebMenu(),
                       Spacer(),
                       Socal(),
                     ],

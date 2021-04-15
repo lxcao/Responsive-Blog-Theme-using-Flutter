@@ -1,4 +1,12 @@
 /*
+ * @Description: 
+ * @Author: clingxin
+ * @Date: 2021-04-14 19:32:03
+ * @LastEditors: OBKoro1
+ * @LastEditTime: 2021-04-15 08:35:13
+ * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/components/blog_post.dart
+ */
+/*
  * @Author: clingxin
  * @Date: 2021-04-14 19:32:03
  * @LastEditTime: 2021-04-14 19:45:10
@@ -6,6 +14,7 @@
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/components/blog_post.dart
  */
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:news/constants.dart';

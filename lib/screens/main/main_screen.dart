@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-03-27 14:23:30
- * @LastEditTime: 2021-04-14 19:07:08
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-15 10:16:37
+ * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/main/main_screen.dart
  */
@@ -15,6 +15,11 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: [],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
