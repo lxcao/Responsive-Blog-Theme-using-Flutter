@@ -1,7 +1,7 @@
 /*
  * @Author: clingxin
  * @Date: 2021-04-14 18:50:05
- * @LastEditTime: 2021-04-15 10:00:21
+ * @LastEditTime: 2021-04-15 10:57:32
  * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/home_screen.dart
@@ -10,6 +10,7 @@
 import 'package:flutter/material.dart';
 import 'package:news/constants.dart';
 import 'package:news/models/Blog.dart';
+import 'package:news/responsive.dart';
 import 'package:news/screens/home/components/blog_post.dart';
 import 'package:news/screens/home/components/categories.dart';
 import 'package:news/screens/home/components/recent_posts.dart';
@@ -34,24 +35,26 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
-          width: kDefaultPadding,
-        ),
-        Expanded(
-          child: Column(
-            children: [
-              Search(),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              Categories(),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              RecentPosts(),
-            ],
+        if (!Responsive.isMobile(context))
+          SizedBox(
+            width: kDefaultPadding,
           ),
-        ),
+        if (!Responsive.isMobile(context))
+          Expanded(
+            child: Column(
+              children: [
+                Search(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                Categories(),
+                SizedBox(
+                  height: kDefaultPadding,
+                ),
+                RecentPosts(),
+              ],
+            ),
+          ),
       ],
     );
   }

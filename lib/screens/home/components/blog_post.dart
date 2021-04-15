@@ -1,16 +1,8 @@
 /*
- * @Description: 
  * @Author: clingxin
  * @Date: 2021-04-14 19:32:03
- * @LastEditors: OBKoro1
- * @LastEditTime: 2021-04-15 08:35:13
- * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/components/blog_post.dart
- */
-/*
- * @Author: clingxin
- * @Date: 2021-04-14 19:32:03
- * @LastEditTime: 2021-04-14 19:45:10
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-15 11:06:06
+ * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/home/components/blog_post.dart
  */
@@ -19,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:news/constants.dart';
 import 'package:news/models/Blog.dart';
+import 'package:news/responsive.dart';
 
 class BlogPostCard extends StatelessWidget {
   final Blog blog;
@@ -77,8 +70,10 @@ class BlogPostCard extends StatelessWidget {
                   ),
                   child: Text(
                     blog.title,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontSize: 32,
+                      fontSize: Responsive.isDesktop(context) ? 32 : 24,
                       fontFamily: "Raleway",
                       color: kDarkBlackColor,
                       height: 1.3,

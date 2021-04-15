@@ -1,13 +1,15 @@
 /*
  * @Author: clingxin
  * @Date: 2021-04-12 10:25:29
- * @LastEditTime: 2021-04-15 10:15:24
+ * @LastEditTime: 2021-04-15 11:03:17
  * @LastEditors: clingxin
  * @Description: In User Settings Edit
  * @FilePath: /Responsive-Blog-Theme-using-Flutter-Starting-Project/lib/screens/main/components/header.dart
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:news/controllers/MenuController.dart';
 import 'package:news/responsive.dart';
 import 'package:news/screens/main/components/socal.dart';
 import 'package:news/screens/main/components/web_menu.dart';
@@ -15,9 +17,7 @@ import 'package:news/screens/main/components/web_menu.dart';
 import '../../../constants.dart';
 
 class Header extends StatelessWidget {
-  const Header({
-    Key key,
-  }) : super(key: key);
+  final MenuController _controller = Get.put(MenuController());
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class Header extends StatelessWidget {
                             Icons.menu,
                             color: Colors.white,
                           ),
-                          onPressed: () {},
+                          onPressed: () => _controller.openOrCloseDrawer(),
                         ),
                       SvgPicture.asset("assets/icons/logo.svg"),
                       Spacer(),
@@ -97,9 +97,10 @@ class Header extends StatelessWidget {
                           ],
                         )),
                   ),
-                  SizedBox(
-                    height: kDefaultPadding,
-                  ),
+                  if (!Responsive.isMobile(context))
+                    SizedBox(
+                      height: kDefaultPadding,
+                    ),
                 ],
               ),
             )
